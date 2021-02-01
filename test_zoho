@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+	int number,a,b,c=0;
+	scanf("%d",&number);
+	for(a=1;a<=number;a++)
+	{
+		for(b=1;b<=(2*number)-a;b++)
+		{
+			if(b<=number-a)
+				printf(" ");
+			else if(a%2==1)
+			{
+				c++;
+				printf("%d " ,c);
+			}
+			else
+			{
+				printf("%d ",c);
+				c--;
+			}
+		}
+		c+=number;
+		printf("\n");
+	}
+}
